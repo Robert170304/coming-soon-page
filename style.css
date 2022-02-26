@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    /* primary */
+    --blue-main : hsl(223, 87%, 63%);
+
+    /* secondary */
+    --page-blue : hsl(223, 87%, 63%);
+    --light-red : hsl(354, 100%, 66%);
+
+    /* neutral */
+    --gray : hsl(0, 0%, 59%);
+    --very-dark-blue : hsl(209, 33%, 12%);
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.main header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.main header img{
+    margin-bottom: 5px;
+    width: 60px;
+}
+.main h1 span{
+    color: var(--gray);
+    font-weight: 100;
+    font-stretch:ultra-expanded;
+    letter-spacing: 1px ;
+}
+.main h1{
+    color: var(--very-dark-blue);
+}
+.main h5 {
+    margin-top: -10px;
+    font-weight: 530;
+    color: var(--very-dark-blue);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+}
+form input {
+    padding: 10px 17px 10px 17px;
+    width: 250px;
+    border: 1px solid lightblue;
+    border-radius: 40px;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+    color: #e6f0ff;
+}
+
+.invalid-email{
+    color: red;
+    margin-top: 1%;
+    margin-bottom: auto;
+    font-style: italic;
+    font-weight: 300;
+    padding-left: 15px;
+    display: none;
+}
+
+form button{
+    margin-left: 10px;
+    margin-top: 15px;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--blue-main);
+    color: white;
+    padding: 5px 40px 5px 40px;
+    box-shadow: 0px 5px 5px rgba(146, 174, 250, 0.5);
+}
+
+button:hover {
+    background-color: hsl(223, 97%, 71%);
+    cursor: pointer;
+}
+
+.main-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main-img img{
+    width: 400px;
+}
+
+.social-icons{
+    margin-top: 35px;
+    height: 30px;
+    color: var(--blue-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons i{
+    padding: 5px 13px 5px 13px;
+    font-size: small;
+    border: 1px solid rgb(237, 250, 255);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.social-icons i:hover{
+    color: white;
+    background-color: var(--blue-main);
+}
+
+.copyright{
+    display: flex;
+    color: var(--gray);
+    font-size: x-small;
+    font-weight: 100;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    main header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+     
+    form input {
+        padding: 10px 17px 10px 17px;
+       /* width: 250px;*/
+        border: 1px solid lightblue;
+        border-radius: 40px;
+        margin: 0 0 0px -45px;
+    }
+
+    .invalid-email{
+        color: red;
+        margin-top: 1%;
+        margin-bottom: auto;
+        margin-left: -40px;
+        padding: 0;
+        font-style: italic;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    form button{
+        border: none;
+        border-radius: 40px;
+        background-color: var(--blue-main);
+        color: white;
+        /*padding: 12px 30px 12px 30px;*/
+        width: 290px;
+        box-shadow: 0px 5px 5px rgba(146, 174, 250, 0.5);
+        margin:  0 auto;
+    }
+    
+    button:hover {
+        background-color: hsl(223, 97%, 71%);
+        cursor: pointer;
+    }
+    
+    .main-img{
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+    }
+    .main-img img{
+        width: 330px;
+    }
+
+    .social-icons{
+        margin-top: 120px;
+        height: 40px;
+        color: var(--blue-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-icons i{
+        margin: 0 5px;
+        padding: 5px 13px 5px 13px; 
+        font-size: small;
+        border: 1px solid rgb(237, 250, 255);
+        border-radius: 20px;
+    }
+    .copyright{
+        color: var(--gray);
+        line-height: normal;
+    }
+}
