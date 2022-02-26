@@ -7,7 +7,7 @@ function ValidateEmail() {
     if (email.value.match(mailformat)) {
         invalidEmailText.style.display = 'none'
         email.style.borderColor = 'lightblue'
-        email.value = '' 
+        alert('Email Submitted.')
         return true;
     } else if (email.value === '') {
         invalidEmailText.textContent = 'Whoops! It looks like you forgot to add your email'
