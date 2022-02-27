@@ -1,13 +1,19 @@
+let email = document.querySelector('#email');
+let invalidEmailText = document.querySelector('.invalid-email')
+
+email.focus()
 
 function ValidateEmail() {
-    let invalidEmailText = document.querySelector('.invalid-email')
-    let email = document.querySelector('#email');
+    
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
- 
+    
     if (email.value.match(mailformat)) {
         invalidEmailText.style.display = 'none'
         email.style.borderColor = 'lightblue'
         alert('Email Submitted.')
+        if (alert) {
+           email.value = ''
+        }
         return true;
     } else if (email.value === '') {
         invalidEmailText.textContent = 'Whoops! It looks like you forgot to add your email'
@@ -19,5 +25,18 @@ function ValidateEmail() {
         invalidEmailText.style.display = 'block'
         email.style.borderColor = 'red'
         return false;
-    } 
+    }
 } 
+
+
+email.addEventListener('keyup', (e) => {
+    clearError(e.target.value)
+})
+
+const clearError = (input) => {
+  // console.log(input)
+   if (input === '' || input === email.value) {
+       invalidEmailText.style.display = 'none'
+       email.style.borderColor = 'lightblue'
+   }
+}
