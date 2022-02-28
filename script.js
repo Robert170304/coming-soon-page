@@ -10,7 +10,7 @@ function ValidateEmail() {
     if (email.value.match(mailformat)) {
         invalidEmailText.style.display = 'none'
         email.style.borderColor = 'lightblue'
-        alert('Email Submitted.')
+        alert('Subscribed.')
         if (alert) {
            email.value = ''
         }
